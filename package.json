@@ -1,6 +1,6 @@
 {
   "name": "utils-belt-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utils modules for backend and frontend JavaScript",
   "main": "index.js",
   "scripts": {
