@@ -8,18 +8,32 @@ A collection of util moduels which work both on the backend and in the broswer.
   `npm install utils-belt-js --save`
 
 ## Usage
+```
+  var utilsBelt = require('sutils-belt-js'),
+      stringUtils = utilsBelt.StringUtils;
 
-  var utilsBelt = require('sutils-belt-js'),;
+  var blankString = '     ';
 
-  var html = '<h1>Hello World</h1>',
-      escaped = escape(html),
-      unescaped = unescape(escaped);
+  if(stringUtils.isBlank(blankString)){
+    // Will return true
+  }
 
-  console.log('html', html, 'escaped', escaped, 'unescaped', unescaped);
+  // methods also can use callback with results in them
 
+  stringUtils.isBlank(blankString, function(isBlank){
+    if(isBlank){
+      // Will return true
+    }
+  });
+
+  // methods are also null and undefined safe
+  if(stringUtils.isBlank(undefinedString)){
+    // Will return true
+  }
+```
 ## Tests
 
-  npm test
+  `npm test`
 
 ## Contributing
 
