@@ -45,3 +45,4 @@ All modules should run on the browser.
 
 * 0.1.0 Initial release
 * 0.1.1 Added StringUtils
+* 0.1.2 Added ArrayUtils.shuffle()
