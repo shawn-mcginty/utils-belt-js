@@ -21,7 +21,6 @@ describe('StringUtils', function(){
 
       assert.equal(expectedString, actualString);
     })
-  })
 
   it('should also work with a callback', function(){
   	  var stringToReplace = 'this is-a "cool" string';
@@ -31,6 +30,7 @@ describe('StringUtils', function(){
       	assert.equal(expectedString, actualString);
       });
   })
+})
 
   describe('#isBlank()', function(){
   	it('should return true with null', function(){
@@ -66,6 +66,17 @@ describe('StringUtils', function(){
   			assert.equal(actualValue, true);
   		});
   	})
+
+    it('should be safe with other types', function(){
+      var someInt = 77;
+      var someObj = { someProperty: "dig it" };
+
+      var shouldBeFalse = StringUtils.isBlank(someInt);
+      var shouldAlsoBeFalse = StringUtils.isBlank(someObj);
+
+      assert.equal(shouldBeFalse, false);
+      assert.equal(shouldAlsoBeFalse, false);
+    })
   })
 
   describe('#isNotBlank()', function(){
@@ -102,6 +113,17 @@ describe('StringUtils', function(){
   			assert.equal(actualValue, false);
   		});
   	})
+
+    it('should be safe with other types', function(){
+      var someInt = 77;
+      var someObj = { someProperty: "dig it" };
+
+      var shouldBeFalse = StringUtils.isNotBlank(someInt);
+      var shouldAlsoBeFalse = StringUtils.isNotBlank(someObj);
+
+      assert.equal(shouldBeFalse, true);
+      assert.equal(shouldAlsoBeFalse, true);
+    })
   })
 
   describe('#toLower()', function(){

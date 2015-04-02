@@ -32,6 +32,8 @@
 			isBlank = true;
 		} else if(stringToCheck === null){
 			isBlank = true;
+		} else if(typeof stringToCheck !== "string"){
+			isBlank = false
 		} else if(removeWhiteSpace(stringToCheck) === '') {
 			isBlank = true;
 		} else {
