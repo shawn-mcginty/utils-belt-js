@@ -9,7 +9,7 @@ A collection of util moduels which work both on the backend and in the broswer.
 
 ## Usage
 ```
-  var utilsBelt = require('sutils-belt-js'),
+  var utilsBelt = require('utils-belt-js'),
       stringUtils = utilsBelt.StringUtils;
 
   var blankString = '     ';
